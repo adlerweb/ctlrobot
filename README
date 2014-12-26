@@ -1,0 +1,23 @@
+This is a simple program to control dancing USB toys manufactured by
+"Dream Cheeky", they were produced somewhere around 2007 and identify
+themselves as 1941:8021. I only tested the one named "USB dancing
+robot".
+
+ctlrobot does all the actual work. You'll need libusb and some basic
+development tools installed to compile it, but assuming you have that
+typing "make" should do the trick. 
+
+To control the toy you can supply two arguments, the first one controls
+the actual movement, the latter additional LEDs. Both arguments accept
+"off" to disable movement/blinking, "slow" for slow movement and normal
+blinking or "fast" for fast movement and double-flash blinking.
+
+As long as you havn't modified your udev-rules this software only works
+as root.
+
+Completly untested udev template:
+
+---snip---
+/etc/udev/rules.d/10-robot.rules
+SUBSYSTEMS=="usb", ATTRS{idVendors}=="1941", ATTRS{idProduct}=="8021", GROUP="users", MODE="0666"
+---snip---

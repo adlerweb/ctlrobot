@@ -1,0 +1,18 @@
+0.0.1 - 7th January 2006
+
+* Initial release.
+
+0.0.2 - 21st July 2006
+
+* Add call to usb_detach_kernel_driver_np so you don't need to unload the
+  usbhid module.
+* Don't claim interface 0; we only use interface 1.
+
+0.0.3 - 29th December 2006
+
+* Added support for Dream Cheeky USB missile launcher from James Puderer.
+
+0.0.4 - 26th December 2014
+
+* Modified for Dream Cheeky USB Dancing Robot from Florian Knodt.
+
